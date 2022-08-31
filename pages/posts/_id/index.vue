@@ -1,5 +1,3 @@
-<!-- 6) Add the template to display the details of a single
-post.  -->
 <template>
   <div class="single-post-page">
     <section class="post">
@@ -16,7 +14,6 @@ post.  -->
   </div>
 </template>
 
-<!-- Add the desired styles -->
 <style scoped>
 .single-post-page {
   padding: 30px;
