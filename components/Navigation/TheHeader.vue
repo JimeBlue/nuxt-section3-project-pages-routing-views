@@ -1,9 +1,3 @@
-<!-- What this component includes: this component includes the
-TheSideNavToggler component and listens to the custom toggle
-event the TheSideNavToggler is emiting (@toggle). It then 
-emits the event sidenavToggle, which we´ll have to handle.
-This component also includes a logo that is a text in a link.
-It also includes a navbar with a list of nuxt-links. -->
 <template>
 <div class="header-container">
   <header class="the-header">

@@ -1,21 +1,14 @@
-<!-- What this component includes: This component is for the responsive layouts. -->
 <template>
 <div class="sidenav-container">
-  <!-- It includes a backdrop,
-  which emits the close event, deciding to 
-  close the navbar if it is currently opened. -->
   <div
     v-if="show"
     class="sidenav-backdrop"
     @click="$emit('close')">
   </div>
-  <!-- It also includes a side nav with a slide animation -->
   <transition name="slide-side">
     <div
       v-if="show"
       class="sidenav">
-      <!-- I emit the close event inside the ul as well, so that
-      the sidenav closes when I navigate through my links  -->
       <ul
         class="nav-list"
         @click="$emit('close')">
@@ -31,8 +24,6 @@
 <script>
 export default {
   name: "TheSidenav",
-  /* Besides it included a property received as prop, 
-  which decides if this component should be shown or not. */
   props: {
     show: {
       type: Boolean,

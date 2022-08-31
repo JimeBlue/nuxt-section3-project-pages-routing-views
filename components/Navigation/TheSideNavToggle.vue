@@ -1,6 +1,3 @@
-<!-- What this component included: This file is a simple handburger menu 
-created with css, which we can click and which emits a toggle
-even, which we can listen from parent components. -->
 <template>
   <div
     class="drawer-toggle"
