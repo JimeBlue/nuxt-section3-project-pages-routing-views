@@ -1,4 +1,9 @@
 <template>
+  <!-- EXPLANATION: I want to add a backround image in the
+  intro section. But this time I don´t want to use a url.
+  Instead the image is stored in a folder in my project. -->
+  <!-- 1) Inside the assets folder create a folder calles
+  images. Add the desired image to it. -->
     <div class="home-page">
     <section class="intro">
       <h1>Get the latest tech news!</h1>
@@ -40,6 +45,9 @@ export default {
   position: relative;
   padding: 30px;
   box-sizing: border-box;
+  /* 2) Add the background image to
+  the intro section. IMPORTANT: use tilde in the path */
+  background-image: url("~assets/images/main-page-background.jpg");
   background-position: center;
   background-size: cover;
 }
