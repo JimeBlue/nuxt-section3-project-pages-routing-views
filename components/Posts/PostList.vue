@@ -1,7 +1,4 @@
 <template>
-    <!-- 2) Create a section with the class post-list and
-    add the PostPreview component inside it, with all the
-    props like I had it before. -->
    <section class="post-list">
       <PostPreview 
       id="1"
@@ -21,12 +18,6 @@
       previewText="This is my third post!"/>
     </section>
 </template>
-
-<!-- 3) I´m using the PostPreview component here, so
-I need to import it an register it. -->
-<!-- 4) Now, I can also use the PostList component in 
-the posts page as well as in the main page as well. 
-Next steps in the posts page . -->
 <script>
     import PostPreview from '@/components/Posts/PostPreview'
     export default {
