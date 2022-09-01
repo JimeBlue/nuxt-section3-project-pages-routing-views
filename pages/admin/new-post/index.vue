@@ -49,8 +49,6 @@ export default {
     },
     data() {
         return {
-            /* 9) Create the editedPost, in which we are going to store
-            what the user enters in the inputs. */
             editedPost: {
                 author: "",
                 title: "",
@@ -60,20 +58,13 @@ export default {
         }
     },
     methods: {
-        /* 11) Add the onSave method to save the post.
-        For now, just console.log editedPost. When
-        I fill in the form I shold see all the data
-        I entered in the console.*/
         onSave() {
             console.log(this.editedPost)
         },
-        /* 13) Add the onCancel method to navigate 
-        back to admin page if the user cancels*/
         onCancel() {
             this.$router.push('/admin')
         }
     }
-    // 14) Next steps in the admin page
 
 }
 </script>
