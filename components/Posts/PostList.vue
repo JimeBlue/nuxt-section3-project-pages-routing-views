@@ -1,9 +1,5 @@
 <template>
    <section class="post-list">
-    <!-- 15) If isAdmin is true, I need to ajust my links. As the links
-    are in the PostPreview component, I pass the information to it,
-    with data binding (:is-admin = "isAdmin" ). Next sept in 
-    the PostPreview component.-->
       <PostPreview 
       id="1"
       :is-admin = "isAdmin"
@@ -32,7 +28,6 @@
     PostPreview
   },
   props: {
-    /* 14) Add props to check whether the user is an admin. */
     isAdmin: {
       type: Boolean,
       dafault: false
