@@ -1,7 +1,13 @@
 <template>
     <div class="admin-page">
     <section class="new-post">
-        <button @click="$router.push('/admin/new-post')">Create Post</button>
+        <!-- Replace the normal button for the resusable 
+         AppButton component. Don´t forger to import and
+        register the component.-->
+        <AppButton @click="$router.push('/admin/new-post')">
+          Create Post
+        </AppButton>
+
     </section>
     <section class="existing-posts">
         <PostList isAdmin/>
@@ -11,8 +17,9 @@
 
 <script>
 import PostList from '@/components/Posts/PostList'
+import AppButton from '../../components/UI/AppButton.vue';
     export default {
-    components: { PostList }
+    components: { PostList, AppButton }
 }
 </script>
 
