@@ -1,9 +1,6 @@
 <template>
     <div class="admin-page">
     <section class="new-post">
-        <!-- Replace the normal button for the resusable 
-         AppButton component. Don´t forger to import and
-        register the component.-->
         <AppButton @click="$router.push('/admin/new-post')">
           Create Post
         </AppButton>

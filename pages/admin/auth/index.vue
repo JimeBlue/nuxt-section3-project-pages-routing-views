@@ -1,12 +1,4 @@
 <template>
-    <!-- EXPLANATION: I create the content for this component.
-    I created a form with the reusable inputs and buttons, in
-    which we can switch between login and signup form when
-    we click the Switch to button. In the form we can enter 
-    email and password to be submitted. Right now nothing gets
-    submitted, this doesn't do anything yet. Now, if I manually
-    navigate to /admin/auth I will see the switching 
-    login and signup forms -->
   <div class="admin-auth-page">
     <div class="auth-container">
       <form>
