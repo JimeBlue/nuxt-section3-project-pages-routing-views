@@ -1,73 +1,34 @@
 <template>
-    <!-- 5) In this component I must have a form
-    that handles the creation of a new post. -->
     <div class="admin-new-post-page">
         <section class="new-post-form">
-            <!--6) Inside the form I´ll include
-            some inputs and two buttons. These 
-            are reusable UI components that I 
-            can find in the components section
-            inside the UI folder. An explanation
-            of what they include can be find inside
-            each component.   -->
-            <!-- 10) Add submit event to the form so that 
-            we save button is clicked the onSave function
-            is call. -->
-            <form @submit.prevent="onSave">
-                <!-- 7) Add the reusable component AppControlInput 4 times,
-                with the defaul type input, expect for the last one, which I
-                set to textarea.  I also pass the label text which we´ll be
-                received in the component as slot. Don´t forger to import and
-                register this component.-->
-                <AppControlInput v-model="editedPost.author">Author Name</AppControlInput>
-
-                <AppControlInput v-model="editedPost.title">Title</AppControlInput>
-
-                <AppControlInput v-model="editedPost.thumbnailLink">Thumbnail Link</AppControlInput>
-
-                <AppControlInput control-type="textarea" v-model="editedPost.content">Content</AppControlInput>
-
-                <!-- 8) Add 2 buttons, a save and a cancel buttons. 
-                Don´t forger to import and register this component.-->
-                <AppButton type="submit">Save</AppButton>
-
-                <!-- 12) On click, the cancel button should call the onCancel method -->
-                <AppButton type="button" style="margin-left: 10px" btn-style="cancel" @click="onCancel">Cancel
-                </AppButton>
-            </form>
+               <!-- ) 6) Use the  AdminFormPost component. 
+               Also use the form in -postId. Next steps there. -->
+            <AdminFormPost />
         </section>
     </div>
 </template>
 
 <script>
-import AppControlInput from "@/components/UI/AppControlInput"
-import AppButton from "@/components/UI/AppButton"
+    /* 4) Import the  AdminFormPost component*/
+import AdminFormPost from "@/components/Admin/AdminFormPost"
 export default {
-    components: {
-        AppControlInput,
-        AppButton
+        /* 5) Register the  AdminFormPost component*/
+      components: {
+        AdminFormPost
     },
-    data() {
-        return {
-            editedPost: {
-                author: "",
-                title: "",
-                thumbnailLink: "",
-                content: ""
-            }
-        }
-    },
-    methods: {
-        onSave() {
-            console.log(this.editedPost)
-        },
-        onCancel() {
-            this.$router.push('/admin')
-        }
-    }
-
+   
 }
 </script>
 
 <style scoped>
+.new-post-form {
+  width: 90%;
+  margin: 20px auto;
+}
+
+@media (min-width: 768px) {
+  .new-post-form {
+    width: 500px;
+  }
+}
 </style>

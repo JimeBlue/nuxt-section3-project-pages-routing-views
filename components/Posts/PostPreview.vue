@@ -1,5 +1,9 @@
 <template>
-      <nuxt-link :to="'/posts/' + id" class="post-preview">
+  <!-- 17) This component will get the propery isAdmin, and it
+  will adjust this link below, in a computed property. -->
+  <!-- 19) Now, I add my computed property postLink to the
+  "to" attribute in the link. Next step in admin page.-->
+      <nuxt-link :to="postLink" class="post-preview">
         <article>
           <div class="post-thumbnail" :style="{backgroundImage: 'url(' + thumbnail + ')'}"></div>
           <div class="post-content">
@@ -18,6 +22,12 @@
             type: String,
             required: true,
             },
+            /* 16) I accept the isAdmin property as prop 
+            comming from the PostList component. */
+            isAdmin: {
+            type: Boolean,
+            dafault: true
+            },
             title: {
             type: String,
             required: true,
@@ -30,12 +40,22 @@
             type: String,
             required: true,
             },
+        },
+        computed: {
+          /* 18) Add a postLink () computed property, 
+          which returns the link I want to go to. So,
+          here we check if isAdmin is true, in which case
+          we return /admin/id, otherwise, we return 
+          /posts/id*/
+          postLink () {
+             return this.isAdmin ? '/admin/' + this.id : '/posts/' + this.id
+          }
+           
         }
 
     }
 </script>
 
-<!-- 6) Add styles. Next steps in pages > index.vue -->
 <style>
     .post-preview {
   border: 1px solid #ccc;

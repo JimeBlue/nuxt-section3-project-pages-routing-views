@@ -4,10 +4,18 @@
         <button @click="$router.push('/admin/new-post')">Create Post</button>
     </section>
     <section class="existing-posts">
-        <PostList />
+      <!-- 20) Pass to PostList component the isAdmin 
+      property comming from PostPreview, which will set it to true.  -->
+        <PostList isAdmin/>
     </section>
     </div>
 </template>
+<!-- 21) The logic is now done. If I go to admin, and I click 
+on a post, I can see the form already filled in with a post.
+And if I go to blog, and I click on a post, I can only see
+the information of an idivual post and not a form ´cause I´m 
+not an admin.
+-->
 
 <script>
 import PostList from '@/components/Posts/PostList'
